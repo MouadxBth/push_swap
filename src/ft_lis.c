@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 04:13:41 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/28 06:44:34 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 12:46:53 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	*ft_lis_sizes(int *array, int size)
 	return (result);
 }
 
-static int	get_smallest(t_lis *info, int element, int previous)
+static int	get_smallest(t_lis *info, int element, long previous)
 {
 	int	index;
 	int	result;
@@ -88,7 +88,7 @@ int	*ft_lis(int *array, int size, int *lis_size)
 	t_lis	info;
 	int		*result;
 	int		index;
-	int		previous;
+	long		previous;
 
 	if (!array || size <= 0 || !lis_size)
 		return (NULL);
@@ -99,7 +99,7 @@ int	*ft_lis(int *array, int size, int *lis_size)
 	result = ft_new_array(info.lis_size, -1);
 	*lis_size = info.lis_size;
 	index = -1;
-	previous = -1;
+	previous = -2147483649;
 	while (++index < info.lis_size)
 	{
 		result[index] = get_smallest(&info, info.lis_size - index, previous);

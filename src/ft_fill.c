@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 03:10:26 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/28 21:26:37 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 12:50:29 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	ft_isdigits(char *word)
 		return (0);
 	length = ft_strlen(word);
 	index = 0;
+	if (word[index] == '-')
+		index++;
 	while (index < length)
 	{
 		if (!ft_isdigit(word[index]))
@@ -33,7 +35,7 @@ static int	ft_isdigits(char *word)
 static int	ft_fill_stack(t_stack *stack, char **elements)
 {
 	int	index;
-	int	value;
+	long	value;
 
 	index = 0;
 	while (elements[index])
@@ -42,8 +44,8 @@ static int	ft_fill_stack(t_stack *stack, char **elements)
 	{
 		if (!ft_isdigits(elements[index]))
 			return (0);
-		value = ft_atoi(elements[index]);
-		if (value < 0)
+		value = ft_atol(elements[index]);
+		if (value > 0x7FFFFFFF || value < -2147483648)
 			return (0);
 		if (ft_fetch(stack, value))
 			return (0);

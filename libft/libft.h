@@ -6,7 +6,7 @@
 /*   By: mbouthai <mbouthai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 23:32:23 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/01/27 16:32:52 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 12:50:20 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *str);
+long		ft_atol(const char *str);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *str);
