@@ -6,7 +6,7 @@
 /*   By: mbouthai <mbouthai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 12:46:28 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/01/26 00:40:51 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 20:31:08 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size > 0)
 	{
 		index = -1;
-		while (src[++index] && index < (size - 1))
+		while (++index < (size - 1) && src[index])
 			dst[index] = src[index];
 		dst[index] = '\0';
 	}

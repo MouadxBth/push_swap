@@ -6,11 +6,12 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:51:12 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/28 17:00:32 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 21:22:50 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 void	print_array(int *array, int size)
 {
@@ -67,7 +68,7 @@ int	main(int argc, char **argv)
 	if (!ft_fill(&a, argc, argv))
 	{
 		ft_free(&a);
-		ft_putendl_fd("Error", 2);
+		fprintf(stderr, "Error\n");
 		return (-1);
 	}
 	if (ft_is_stack_sorted(&a, 0))
@@ -76,6 +77,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort(&a, &b);
+	print_stacks(&a, &b);
 	ft_free(&a);
 	return (0);
 }

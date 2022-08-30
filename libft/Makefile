@@ -4,7 +4,7 @@ DEPS	= libft.h
 
 CC	= gcc
 
-CFLAGS	=-Wall -Werror -Wextra -include $(DEPS) 
+CFLAGS	=-Wall -Werror -Wextra -g -include $(DEPS) 
 
 ARCHIVE	= ar -rcs
 
@@ -25,7 +25,7 @@ SRCS	= ft_isalpha.c ft_isdigit.c \
 	  ft_strmapi.c ft_striteri.c \
 	  ft_putchar_fd.c ft_putstr_fd.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c \
-	  ft_atol.c \
+	  ft_atol.c ft_strjoin_del.c\
 	  ../get_next_line/get_next_line_utils.c \
 	  ../get_next_line/get_next_line.c
 			

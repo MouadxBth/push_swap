@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 19:14:43 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/29 01:03:35 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/08/30 13:07:15 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc < 1)
+	if (argc < 2)
 		return (0);
 	if (!ft_fill(&a, argc, argv))
 	{
