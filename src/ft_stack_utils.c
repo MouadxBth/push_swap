@@ -38,7 +38,7 @@ long	ft_stack_min(t_stack *stack, int elements)
 	if (!stack || !*stack)
 		return (-1);
 	index = *stack;
-	result = (*stack)->value;
+	result = index->value;
 	current = 0;
 	while (index)
 	{
@@ -62,7 +62,7 @@ long	ft_stack_max(t_stack *stack, int elements)
 	if (!stack || !*stack)
 		return (-1);
 	index = *stack;
-	result = 0;
+	result = index->value;
 	current = 0;
 	while (index)
 	{

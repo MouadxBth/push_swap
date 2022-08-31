@@ -77,7 +77,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort(&a, &b);
-	print_stacks(&a, &b);
+	// print_stacks(&a, &b);
 	ft_free(&a);
 	return (0);
 }

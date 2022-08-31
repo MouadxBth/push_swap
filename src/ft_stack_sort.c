@@ -14,7 +14,7 @@
 
 static void	small_sort(t_stack *stack, int id, int elements)
 {
-	int	max;
+	long	max;
 
 	max = ft_stack_max(stack, elements);
 	if ((*stack)->value == max)
@@ -27,7 +27,6 @@ static void	small_sort(t_stack *stack, int id, int elements)
 
 static void	medium_sort(t_stack *a, t_stack *b, int size)
 {
-	printf("in\n");
 	while (!ft_is_stack_sorted(a, 0) && size > 3)
 	{
 		ft_float_element(a, size, 'a', ft_stack_min(a, -1));
