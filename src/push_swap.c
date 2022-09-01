@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:51:12 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/30 21:22:50 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:22:02 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort(&a, &b);
-	print_stacks(&a, &b);
 	ft_free(&a);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 03:10:26 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/30 21:38:25 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:20:11 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,13 @@ static int	validate_input(char *str)
 
 static int	ft_fill_stack(t_stack *stack, char *input, char **elements)
 {
-	int	index;
+	int		index;
 	long	value;
 
-	index = -1;
-	while (elements[++index])
+	index = 0;
+	while (elements[index])
+		index++;
+	while (--index >= 0)
 	{
 		if (!validate_input(input))
 			return (0);
@@ -86,7 +88,7 @@ static int	ft_fill_stack(t_stack *stack, char *input, char **elements)
 int	ft_fill(t_stack *stack, int argc, char **argv)
 {
 	char	*result;
-	int	index;
+	int		index;
 
 	if (!stack)
 		return (0);

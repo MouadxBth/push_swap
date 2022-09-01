@@ -6,7 +6,7 @@
 /*   By: mbouthai <mbouthai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 21:52:25 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/30 12:49:48 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:18:52 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ static int	ft_negative(const char *str, int *i)
 
 long	ft_atol(const char *str)
 {
-	int	i;
-	int	negative;
+	int		i;
+	int		negative;
 	long	resultat;
 
 	i = 0;

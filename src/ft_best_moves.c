@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 03:40:20 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/28 17:07:30 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:23:03 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@ static t_moves	*ft_correct_position(t_info *info, int element)
 
 	moves = create_moves(element);
 	moves->rb = ft_moves_to_top(info->b, info->b_size, element);
-	if (element > ft_fetch(info->a, -1)->value && element < (*(info->a))->value)
+	if (element > ft_stack_last(info->a)->value
+		&& element < (*(info->a))->value)
 		return (ft_optimize_moves(info, moves, element));
 	size = info->a_size;
 	max = ft_stack_max(info->a, size);

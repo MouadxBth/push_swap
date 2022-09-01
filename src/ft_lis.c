@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 04:13:41 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/30 12:46:53 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:22:21 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	*ft_lis(int *array, int size, int *lis_size)
 	t_lis	info;
 	int		*result;
 	int		index;
-	long		previous;
+	long	previous;
 
 	if (!array || size <= 0 || !lis_size)
 		return (NULL);

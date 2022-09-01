@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*   ft_stack_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:24:51 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/24 06:28:07 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:21:43 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,20 @@ int	ft_is_stack_sorted(t_stack *stack, int reverse)
 			return (1);
 	}
 	return (1);
+}
+
+t_node	*ft_stack_last(t_stack *stack)
+{
+	t_node	*index;
+
+	if (!stack)
+		return (NULL);
+	index = *stack;
+	while (index)
+	{
+		if (!index->next)
+			return (index);
+		index = index->next;
+	}
+	return (index);
 }

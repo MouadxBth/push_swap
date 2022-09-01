@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:50:22 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/29 01:01:24 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:07:08 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int		ft_stack_size(t_stack *stack);
 int		ft_stack_min(t_stack *stack, int elements);
 int		ft_stack_max(t_stack *stack, int elements);
 int		ft_is_stack_sorted(t_stack *stack, int reverse);
+t_node	*ft_stack_last(t_stack *stack);
 
 int		*ft_lis(int *array, int size, int *lis_size);
 

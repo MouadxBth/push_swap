@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:21:41 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/28 06:47:39 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/01 12:03:50 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void	ft_free(t_stack *stack)
 t_node	*ft_fetch(t_stack *stack, int value)
 {
 	t_node	*index;
-	t_node	*temp;
 
 	if (!stack || !*stack)
 		return (NULL);
@@ -79,11 +78,7 @@ t_node	*ft_fetch(t_stack *stack, int value)
 	{
 		if (index->value == value)
 			return (index);
-		if (!index->next)
-			temp = index;
 		index = index->next;
 	}
-	if (value == -1)
-		return (temp);
 	return (NULL);
 }
