@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 03:10:26 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 18:08:26 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:43:56 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,15 @@ int	ft_fill(t_stack *stack, int argc, char **argv)
 	result = NULL;
 	index = 0;
 	while (++index < argc)
+	{
+		if (!ft_strlen(argv[index]))
+		{
+			if (result)
+				free(result);
+			return (0);
+		}
 		result = ft_strjoin_del(result, argv[index], ' ');
+	}
 	ret = ft_fill_stack(stack, result, ft_split(result, ' '));
 	free(result);
 	return (ret);

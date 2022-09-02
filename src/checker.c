@@ -95,7 +95,8 @@ int	main(int argc, char **argv)
 		ft_putendl_fd("Error", 2);
 		return (1);
 	}
-	execute_operations(&a, &b);
+	if (!execute_operations(&a, &b))
+		return (ft_free(&a), ft_free(&b), 0);
 	if (ft_is_stack_sorted(&a, 0))
 		ft_putendl_fd("OK", 1);
 	else
