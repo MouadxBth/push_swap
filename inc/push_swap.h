@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:50:22 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 18:02:16 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:29:12 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,5 @@ int		*ft_stack_to_array(t_stack *stack, int size);
 t_stack	*ft_array_to_stack(int *array, int size);
 
 void	sort(t_stack *a, t_stack *b);
-
-void	print_array(int *array, int size);
-void	print_stack(t_stack *stack);
-void	print_stacks(t_stack *a, t_stack *b);
 
 #endif
