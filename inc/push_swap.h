@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 21:50:22 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/01 12:45:32 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:02:16 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "libft.h"
 # include "ft_printf.h"
 # include "get_next_line.h"
-# include <stdio.h>
 
 typedef struct s_node
 {

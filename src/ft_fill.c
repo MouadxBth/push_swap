@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 03:10:26 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 17:57:56 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:08:26 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,10 @@ int	ft_fill(t_stack *stack, int argc, char **argv)
 		return (0);
 	if (!argv)
 		return (0);
-	if (argc <= 2)
-	{
-		if (argc == 2 && !ft_strlen(argv[1]))
-			return (0);
+	if (argc < 2)
 		return (1);
-	}
+	if (argc == 2 && ft_strlen(argv[1]) == 0)
+		return (0);
 	result = NULL;
 	index = 0;
 	while (++index < argc)
