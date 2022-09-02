@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 19:52:46 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 20:08:57 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 20:31:47 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,16 +65,16 @@ static int	ft_fill_stack(t_stack *stack, char *input, char **elements)
 	index = 0;
 	while (elements[index])
 		index++;
+	if (!index)
+		return (0);
 	while (--index >= 0)
 	{
-		if (!validate_input(input))
-			return (0);
-		if (!ft_isdigits(elements[index]))
+		if (!validate_input(input)
+			|| !ft_isdigits(elements[index]))
 			return (0);
 		value = ft_atol(elements[index]);
-		if (value > 0x7FFFFFFF || value < -2147483648)
-			return (0);
-		if (ft_fetch(stack, value))
+		if (value > 0x7FFFFFFF || value < -2147483648
+			|| ft_fetch(stack, value))
 			return (0);
 		ft_push(stack, value);
 	}

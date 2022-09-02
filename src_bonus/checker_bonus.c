@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 19:52:07 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 19:52:23 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 20:51:12 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	execute_operations(t_stack *a, t_stack *b)
 	{
 		operation = get_next_line(0);
 		if (!operation)
-			return (0);
+			return (1);
 		if (!is_operation(operation))
 		{
 			ft_putendl_fd("Error", 2);
@@ -66,6 +66,7 @@ int	execute_operations(t_stack *a, t_stack *b)
 		execute_operation(a, b, operation);
 		free(operation);
 	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -85,10 +86,13 @@ int	main(int argc, char **argv)
 	}
 	if (!execute_operations(&a, &b))
 		return (ft_free(&a), ft_free(&b), 0);
-	if (ft_is_stack_sorted(&a, 0))
-		ft_putendl_fd("OK", 1);
 	else
-		ft_putendl_fd("KO", 2);
+	{
+		if (ft_is_stack_sorted(&a, 0))
+			ft_putendl_fd("OK", 1);
+		else
+			ft_putendl_fd("KO", 2);
+	}
 	ft_free(&a);
 	ft_free(&b);
 }
