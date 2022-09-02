@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:13:10 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/08/30 20:31:41 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 14:19:26 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strjoin_del(char *s1, char const *s2, char c)
 	{
 		ft_strlcpy(result, s1, s1_len + 1);
 		result[s1_len] = c;
+		result[s1_len + 1] = '\0';
 		ft_strlcat(result, s2, s1_len + s2_len + 2);
 	}
 	if (!s1)

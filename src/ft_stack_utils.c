@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:24:51 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/01 12:44:33 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/02 14:17:56 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ long	ft_stack_min(t_stack *stack, int elements)
 	if (!stack || !*stack)
 		return (-1);
 	index = *stack;
-	result = (*stack)->value;
+	result = index->value;
 	current = 0;
 	while (index)
 	{
@@ -62,7 +62,7 @@ long	ft_stack_max(t_stack *stack, int elements)
 	if (!stack || !*stack)
 		return (-1);
 	index = *stack;
-	result = 0;
+	result = index->value;
 	current = 0;
 	while (index)
 	{
