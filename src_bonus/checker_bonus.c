@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 19:52:07 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 20:51:12 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/03 03:15:41 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	is_operation(char *s)
 {
-	return (!ft_strncmp(s, "sa", 2) || !ft_strncmp(s, "sb", 2)
-		|| !ft_strncmp(s, "ss", 2) || !ft_strncmp(s, "pa", 2)
-		|| !ft_strncmp(s, "pb", 2) || !ft_strncmp(s, "ra", 2)
-		|| !ft_strncmp(s, "rb", 2) || !ft_strncmp(s, "rr", 2)
-		|| !ft_strncmp(s, "rra", 3) || !ft_strncmp(s, "rrb", 3)
-		|| !ft_strncmp(s, "rrr", 3));
+	return (!ft_strncmp(s, "sa\n", 3) || !ft_strncmp(s, "sb\n", 3)
+		|| !ft_strncmp(s, "ss\n", 3) || !ft_strncmp(s, "pa\n", 3)
+		|| !ft_strncmp(s, "pb\n", 3) || !ft_strncmp(s, "ra\n", 3)
+		|| !ft_strncmp(s, "rb\n", 3) || !ft_strncmp(s, "rr\n", 3)
+		|| !ft_strncmp(s, "rra\n", 4) || !ft_strncmp(s, "rrb\n", 4)
+		|| !ft_strncmp(s, "rrr\n", 4));
 }
 
 void	execute_operation(t_stack *a, t_stack *b, char *operation)

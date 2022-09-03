@@ -6,7 +6,7 @@
 /*   By: mbouthai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 19:52:46 by mbouthai          #+#    #+#             */
-/*   Updated: 2022/09/02 20:31:47 by mbouthai         ###   ########.fr       */
+/*   Updated: 2022/09/03 03:13:04 by mbouthai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static int	validate_input(char *str)
 	return (1);
 }
 
-static int	ft_fill_stack(t_stack *stack, char *input, char **elements)
+static int	ft_fill_stack(t_stack *stack, char **elements)
 {
 	int		index;
 	long	value;
@@ -69,7 +69,7 @@ static int	ft_fill_stack(t_stack *stack, char *input, char **elements)
 		return (0);
 	while (--index >= 0)
 	{
-		if (!validate_input(input)
+		if (!validate_input(elements[index])
 			|| !ft_isdigits(elements[index]))
 			return (0);
 		value = ft_atol(elements[index]);
@@ -109,7 +109,7 @@ int	ft_fill(t_stack *stack, int argc, char **argv)
 		}
 		result = ft_strjoin_del(result, argv[index], ' ');
 	}
-	ret = ft_fill_stack(stack, result, ft_split(result, ' '));
+	ret = ft_fill_stack(stack, ft_split(result, ' '));
 	free(result);
 	return (ret);
 }
